@@ -1,0 +1,35 @@
+---
+layout: base.vto
+---
+<div class="bg-white py-4 sm:py-8">
+  <div class="mx-auto max-w-4xl px-6 lg:px-8">
+    <article data-title="{{ title }}" data-pagefind-index-attrs="data-title">
+      <h1 class="text-3xl text-red-400 tracking-widest font-medium title-font mb-1">{{ title }}</h1>
+      <div class="prose">
+        {{ content }}
+      </div>
+    </article>
+    <nav class="page-pagination pagination">
+      <ul>
+        {{- set previousPost = search.previousPage(url, "type=post") }}
+        {{- if previousPost }}
+        <li class="pagination-prev">
+          <a href="{{ previousPost.url }}" rel="prev">
+            <span>上一篇：</span>
+            <strong>{{ previousPost.title }}</strong>
+          </a>
+        </li>
+        {{ /if }}
+        {{- set nextPost = search.nextPage(url, "type=post") }}
+        {{- if nextPost }}
+        <li class="pagination-next">
+          <a href="{{ nextPost.url }}" rel="next">
+            <span>下一篇：</span>
+            <strong>{{ nextPost.title }}</strong>
+          </a>
+        </li>
+        {{ /if }}
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+{
+  "metas": {
+    "site": "爱学习的好孩子",
+    "description": "活动老、学到老，绝不投机取巧，坚持日拱一卒，进一寸有一寸的欢喜。",
+    "author": "大道至简",
+    "homepage": "https://github.com/zhilande"
+  },
+  "fav_links": [
+    {
+      "title": "WebSites",
+      "links": [{
+        "name": "Deno Deploy",
+        "title": "Deno云官网",
+        "url": "https://dash.deno.com/login?redirect=/"
+      }, {
+        "name": "Github",
+        "title": "全球最大基友交流社区",
+        "url": "https://github.com/"
+      }, {
+        "name": "Supabase",
+        "title": "非常好的一款免费大象数据库",
+        "url": "https://supabase.com/"
+      }, {
+        "name": "Cpolar",
+        "title": "不错的内网穿透工具",
+        "url": "https://www.cpolar.com/"
+      }]
+    },
+
+    {
+      "title": "Docs",
+      "links": [{
+        "name": "Deno",
+        "title": "Deno官网",
+        "url": "https://deno.com/"
+      }, {
+        "name": "MDN",
+        "title": "JavaScript最好的学习网站",
+        "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript"
+      }, {
+        "name": "TypeScript",
+        "title": "TypeScript学习网站",
+        "url": "https://www.tslang.cn/docs/home.html"
+      }, {
+        "name": "Lume",
+        "title": "本博客使用的库",
+        "url": "https://lume.land/"
+      }]
+    },
+
+    {
+      "title": "iPhone",
+      "links": [{
+        "name": "Sickw",
+        "title": "iPhone信息查询",
+        "url": "https://sickw.com/"
+      }, {
+        "name": "ATT.com",
+        "title": "ATT官方免费解锁",
+        "url": "https://www.att.com/deviceunlock/unlockstep1"
+      }, {
+        "name": "Iccid",
+        "title": "最新的Iccid查询",
+        "url": "http://iccid.online"
+      }, {
+        "name": "Tool.lu",
+        "title": "各类常用编码解码等工具",
+        "url": "https://tool.lu/encdec/"
+      }]
+    },
+    {
+      "title": "Tools",
+      "links": [{
+        "name": "SMS",
+        "title": "免费接收国外验证码的平台",
+        "url": "https://sms.sellaite.com/"
+      }, {
+        "name": "123APPS",
+        "title": "音视频、PDF工具箱",
+        "url": "https://mp3cut.net/cn/"
+      }, {
+        "name": "Convertio",
+        "title": "文件格式转换",
+        "url": "https://convertio.co/zh/ocr/"
+      }, {
+        "name": "Remove.Bg",
+        "title": "智能抠图网站",
+        "url": "https://www.remove.bg/zh/"
+      }]
+    }
+  ]
+}
