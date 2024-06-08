@@ -2,6 +2,7 @@ export const layout = "archive.vto";
 export const title = "Archive";
 
 export default function* ({ search, paginate }) {
+  const url = (n) => (n === 1) ? "/archive/" : `/archive/${n}/`;
   const posts = search.pages("type=post", "date=desc");
 
   for (
@@ -17,12 +18,4 @@ export default function* ({ search, paginate }) {
 
     yield data;
   }
-}
-
-function url(n) {
-  if (n === 1) {
-    return "/archive/";
-  }
-
-  return `/archive/${n}/`;
 }

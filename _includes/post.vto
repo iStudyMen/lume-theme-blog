@@ -6,7 +6,7 @@ layout: base.vto
     <article data-title="{{ title }}" data-pagefind-index-attrs="data-title">
       <h1 class="text-3xl text-red-400 tracking-widest font-medium title-font mb-1">{{ title }}</h1>
       <div class="prose">
-        {{ content }}
+        {{ origin == "supabase" ? content : ( content |> md ) }}
       </div>
     </article>
     <nav class="page-pagination pagination">
