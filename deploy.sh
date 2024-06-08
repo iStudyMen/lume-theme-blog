@@ -4,7 +4,7 @@
 set -e
 git add .
 read -t 30 -p '请输入Tag信息:' tag_name
-git commit -m "$tag_name"
-git tag tag_name
+git commit -m $tag_name
+git tag $tag_name
 
-git remote add origin git@github.com:iStudyMen/lume-theme-blog.git || git push -u origin tag_name
+git remote add origin git@github.com:iStudyMen/lume-theme-blog.git || git push -u origin $tag_name
