@@ -27,15 +27,22 @@
         <span class="ml-3 text-xl">{{ metas.site }}</span>
       </a>
       <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
-        <a href="/archive/" class="mr-5 hover:text-gray-900">Archive</a>
+        {{ for nav of search.values("category") }}
+        {{ if nav != "Archive" }}
+        <a href="/{{nav}}/" class="mr-5 hover:text-gray-900">{{nav}}</a>
+        {{ /if }}
+        {{ /for }}
+        <a href="/Archive/" class="mr-5 hover:text-gray-900">Archive</a>
         <a href="/contact/" class="mr-5 hover:text-gray-900">Contact</a>
       </nav>
     </div>
   </header>
+  
   <div class="container px-5 py-4 mx-auto">
     <div class="search" id="search"></div>
     {{ content }}
   </div>
+
   <footer class="text-gray-600 body-font">
     <div class="container px-5 py-4 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
       <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
@@ -95,5 +102,4 @@
     </div>
   </footer>
 </body>
-
 </html>

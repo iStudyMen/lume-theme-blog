@@ -45,7 +45,6 @@ export default function (userOptions?: Options) {
   const options = merge(defaults, userOptions);
 
   return (site: Lume.Site) => {
-
     const files = [
       "favicon.ico",
       "styles.css",
@@ -68,7 +67,15 @@ export default function (userOptions?: Options) {
       .use(tailwindcss({
         extensions: [".html", ".jsx"],
         options: {
-          plugins: [typography],
+          plugins: [
+            typography,
+            function ({addVariant}) {
+              addVariant( 
+                'prose-inline-code',
+                '&.prose :where(:not(pre)>code):not(:where([class~="not-prose"] *))'
+              );
+            }
+          ],
         },
       }))
       .use(postcss())
@@ -85,17 +92,8 @@ export default function (userOptions?: Options) {
       .use(pagefind(options.pagefind))
       .use(sitemap())
       .use(feed(options.feed))
-      .copy("fonts")
-      .copy("js")
       .copy("favicon.png")
       .mergeKey("extra_head", "stringArray")
-      .preprocess([".md"], (pages) => {
-        for (const page of pages) {
-          page.data.excerpt ??= (page.data.content as string).split(
-            /<!--\s*more\s*-->/i,
-          )[0];
-        }
-      });
 
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);
