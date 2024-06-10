@@ -18,7 +18,7 @@ export default function* ({ search, paginate }) {
   const categorys = search.values("category");
   for(let i=0; i<categorys.length; i++) {
     let category = categorys[i];
-    if(category == "Archive") continue;
+    if(category == "archive") continue;
 
     const url = (n) => (n === 1) ? `/${category}/` : `/${category}/${n}/`;
     const datas = search.pages(`category=${category}`, "date=desc");

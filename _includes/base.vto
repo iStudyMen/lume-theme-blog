@@ -28,11 +28,13 @@
       </a>
       <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
         {{ for nav of search.values("category") }}
-        {{ if nav != "Archive" }}
-        <a href="/{{nav}}/" class="mr-5 hover:text-gray-900">{{nav}}</a>
+        {{ if nav != "archive" }}
+        <a href="/{{nav}}/" class="mr-5 hover:text-gray-900">
+          {{ nav.replace(/^./, match => match.toUpperCase()) }}
+        </a>
         {{ /if }}
         {{ /for }}
-        <a href="/Archive/" class="mr-5 hover:text-gray-900">Archive</a>
+        <a href="/archive/" class="mr-5 hover:text-gray-900">Archive</a>
         <a href="/contact/" class="mr-5 hover:text-gray-900">Contact</a>
       </nav>
     </div>
