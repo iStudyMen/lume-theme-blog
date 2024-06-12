@@ -64,7 +64,8 @@ export default function (userOptions?: Options) {
       "index.vto",
       "404.vto",
       "contact.vto",
-      "archive.page.js",      
+      "pages/archive.page.js",
+      "pages/supabase.page.js",   
     ];
 
     for (const file of files) {
