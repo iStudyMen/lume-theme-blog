@@ -2,3 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+pre {
+  position: relative !important;
+}
+
+.adong {
+  color: #adb5bd;
+  box-sizing: border-box;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 5px 10px;
+  font-size: 0.8em;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border-radius: 0 0.15rem;
+}
+
+.adong:hover {
+  color: black;
+  background: white;
+}

@@ -19,6 +19,8 @@ import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
 import "npm:prismjs@1.29.0/components/prism-git.min.js";
 import "npm:prismjs@1.29.0/components/prism-typescript.min.js";
 import "npm:prismjs@1.29.0/components/prism-bash.min.js";
+import "npm:prismjs@1.29.0/components/prism-json.min.js";
+import code_copy from "npm:markdown-it-copy";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import typography from "npm:@tailwindcss/typography";
@@ -190,5 +192,6 @@ export default function (userOptions?: Options) {
 
     // Markdown-it plugin
     site.hooks.addMarkdownItPlugin(alert);
+    // site.hooks.addMarkdownItPlugin(code_copy);
   };
 }
